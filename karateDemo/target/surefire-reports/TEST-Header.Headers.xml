@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="1" name="Header configuration, Get all the headers before any request" skipped="0" tests="2" time="6.93492">
+<testcase classname="Header.Headers" name="Check head performing" time="5.756879">
+<system-out><![CDATA[And def setheaders = { Authorization: 'mito_mock_api_key_12as51-gfhkn3-132', X-Client-Version: '0.33.0 (8) @ 8-91796ed (master)', X-Request-Tracking-Id: 'f163b0b1-d698-417b-88eb-35075a19d914',X-Request-Session-Id: 'b223ea7a-7204-46ea-b010-af0c19c937c8' }.passed
+Given headers setheaders....................................................passed
+And url 'http://dev.mito.hu/oneapp/login/'..................................passed
+Given request {'type' : 'IMSI','IMSI' : '35646316464313565746'}.............passed
+When method POST............................................................passed
+Then print response.........................................................passed
+Then def temp = karate.prevRequest..........................................passed
+* print temp................................................................passed
+* def reqheaders = temp.headers.............................................passed
+* print reqheaders..........................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Header.Headers" name="Change Header value" time="1.178041">
+<failure message="com.intuit.karate.exception.KarateException: status code was: 405, expected: 200, response time: 589, url: http://dev.mito.hu/oneapp/pin/pin, response: &lt;!DOCTYPE HTML PUBLIC &quot;-//IETF//DTD HTML 2.0//EN&quot;&gt;&#10;&lt;html&gt;&lt;head&gt;&#10;&lt;title&gt;405 Method Not Allowed&lt;/title&gt;&#10;&lt;/head&gt;&lt;body&gt;&#10;&lt;h1&gt;Method Not Allowed&lt;/h1&gt;&#10;&lt;p&gt;The requested method PUT is not allowed for the URL /oneapp/pin/pin.&lt;/p&gt;&#10;&lt;hr&gt;&#10;&lt;address&gt;Apache/2.4.10 (Debian) Server at dev.mito.hu Port 80&lt;/address&gt;&#10;&lt;/body&gt;&lt;/html&gt;&#10;&#10;&#9;at com.intuit.karate.StepDefs.status(StepDefs.java:480)&#10;&#9;at ✽.Then status 200(Header/Headers.feature:31)&#10;"><![CDATA[And def setheaders = { Authorization: 'mito_mock_api_key_12as51-gfhkn3-132', X-Client-Version: '0.33.0 (8) @ 8-91796ed (master)', X-Request-Tracking-Id: 'f163b0b1-d698-417b-88eb-35075a19d914',X-Request-Session-Id: 'b223ea7a-7204-46ea-b010-af0c19c937c8' }.passed
+Then print reqheaders.......................................................passed
+Given url 'http://dev.mito.hu/oneapp/pin/'..................................passed
+And request {'context' : 'login','serviceType': 'phoneNumber','serviceId' : '385981111111'}.passed
+When method POST............................................................passed
+Then status 200.............................................................passed
+And def nonce = response.nonce..............................................passed
+Given path '/pin'...........................................................passed
+And def payload = {'context' : 'service','serviceType': 'phoneNumber','serviceId': '3859811111111111','PIN': '1234'}.passed
+And set payload $.nonce = nonce.............................................passed
+And request payload.........................................................passed
+When method PUT.............................................................passed
+Then status 200.............................................................failed
+And match response contains {serviceId:'4567838239123017'}..................skipped
+
+StackTrace:
+com.intuit.karate.exception.KarateException: status code was: 405, expected: 200, response time: 589, url: http://dev.mito.hu/oneapp/pin/pin, response: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>405 Method Not Allowed</title>
+</head><body>
+<h1>Method Not Allowed</h1>
+<p>The requested method PUT is not allowed for the URL /oneapp/pin/pin.</p>
+<hr>
+<address>Apache/2.4.10 (Debian) Server at dev.mito.hu Port 80</address>
+</body></html>
+
+	at com.intuit.karate.StepDefs.status(StepDefs.java:480)
+	at ✽.Then status 200(Header/Headers.feature:31)
+]]></failure>
+</testcase>
+</testsuite>

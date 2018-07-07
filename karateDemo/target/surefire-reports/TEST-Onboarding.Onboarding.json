@@ -1,0 +1,1102 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "*def url callonce BaseUrl",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 173608341,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "def data \u003d callonce  {serviceId:\u00273859811111111\u0027}",
+            "match": {
+              "arguments": [
+                {
+                  "val": "data",
+                  "offset": 4
+                },
+                {
+                  "val": "callonce  {serviceId:\u00273859811111111\u0027}",
+                  "offset": 11
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "Given ",
+            "doc_string": {
+              "content_type": "",
+              "line": 6,
+              "value": "12:12:53.882 WARN  - not a js function or feature file:  - [type: NULL, value: null]\n12:12:53.886 DEBUG - cached callonce: \n"
+            }
+          },
+          {
+            "result": {
+              "duration": 4685304,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "def filecompare \u003d read(\u0027JSONSchema.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "filecompare",
+                  "offset": 4
+                },
+                {
+                  "val": "read(\u0027JSONSchema.json\u0027)",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 11,
+        "name": "Login using SMS",
+        "description": "",
+        "id": "onboarding-api;login-using-sms",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 76494,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "url BaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "BaseUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3573072,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "path \u0027/login\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027/login\u0027",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 4144639,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "request read(\u0027LoginWithSMS.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "read(\u0027LoginWithSMS.json\u0027)",
+                  "offset": 8
+                }
+              ],
+              "location": "StepDefs.request(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 823013443,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "method POST",
+            "match": {
+              "arguments": [
+                {
+                  "val": "POST",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 16,
+              "value": "12:12:54.287 DEBUG - \n1 \u003e POST http://18.184.255.205:8888/api/login\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Connection: Keep-Alive\n1 \u003e Content-Length: 208\n1 \u003e Content-Type: application/json; charset\u003dUTF-8\n1 \u003e Host: 18.184.255.205:8888\n1 \u003e User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_172)\n{\"type\":\"headerEnrichment\",\"serviceId\":\"4/PzOJ+h/MmrEdvJSpLdwg\u003d\u003d\",\"device\":{\"id\":\"6b0db8f1-d59e-4eed-b023-ee6820839a45\",\"model\":\"Samsung S8\",\"pushToken\":\"d968ba80-a4da-4527-a9aa-97de4de8ecee\",\"os\":\"android\"}}\n\n12:12:54.724 DEBUG - \n1 \u003c 200\n1 \u003c Content-Type: application/json\n1 \u003c Date: Fri, 06 Jul 2018 06:42:54 GMT\n1 \u003c Transfer-Encoding: chunked\n1 \u003c X-Application-Context: application:8888\n{\n  \"accessToken\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ0b3B0YWwuY29tIiwiZXhwIjoxNDI2NDIwODAwLCJodHRwOi8vdG9wdGFsLmNvbS9qd3RfY2xhaW1zL2lzX2FkbWluIjp0cnVlLCJjb21wYW55IjoiVG9wdGFsIiwiYXdlc29tZSI6dHJ1ZX0.yRQYnWzskCZUxPwaQupWkiUzKELZ49eM7oWxAQK_ZXw\",\n  \"accessExpiresIn\" : 300,\n  \"idToken\" : \"1234zskCZUxPwaQupWkiUzKELZ49eM7oWxAQK_ZXw\",\n  \"refreshToken\" : \"QYnWzskCZUxPwaQupWkiUzKELZ49eM7oWxAQK_ZXw\",\n  \"refreshExpiresIn\" : 1800\n}\n\n12:12:54.727 DEBUG - response time in milliseconds: 797\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 537794,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 10,
+            "name": "@Login"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "*def url callonce BaseUrl",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 254464,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "def data \u003d callonce  {serviceId:\u00273859811111111\u0027}",
+            "match": {
+              "arguments": [
+                {
+                  "val": "data",
+                  "offset": 4
+                },
+                {
+                  "val": "callonce  {serviceId:\u00273859811111111\u0027}",
+                  "offset": 11
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "Given ",
+            "doc_string": {
+              "content_type": "",
+              "line": 6,
+              "value": "12:12:54.738 DEBUG - callonce cache hit for: \n"
+            }
+          },
+          {
+            "result": {
+              "duration": 734375,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "def filecompare \u003d read(\u0027JSONSchema.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "filecompare",
+                  "offset": 4
+                },
+                {
+                  "val": "read(\u0027JSONSchema.json\u0027)",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 20,
+        "name": "Login with IMSI",
+        "description": "",
+        "id": "onboarding-api;login-with-imsi",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 53181,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "url BaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "BaseUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 267680,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "path \u0027/login\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027/login\u0027",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 142581,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "request {\u0027type\u0027 : \u0027IMSI\u0027,\u0027IMSI\u0027 : \u002735646316464313565746\u0027}",
+            "match": {
+              "arguments": [
+                {
+                  "val": "{\u0027type\u0027 : \u0027IMSI\u0027,\u0027IMSI\u0027 : \u002735646316464313565746\u0027}",
+                  "offset": 8
+                }
+              ],
+              "location": "StepDefs.request(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 469045892,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "method POST",
+            "match": {
+              "arguments": [
+                {
+                  "val": "POST",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 24,
+              "value": "12:12:54.744 DEBUG - \n1 \u003e POST http://18.184.255.205:8888/api/login\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Connection: Keep-Alive\n1 \u003e Content-Length: 45\n1 \u003e Content-Type: application/json; charset\u003dUTF-8\n1 \u003e Host: 18.184.255.205:8888\n1 \u003e User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_172)\n{\"type\":\"IMSI\",\"IMSI\":\"35646316464313565746\"}\n\n12:12:55.210 DEBUG - \n1 \u003c 202\n1 \u003c Content-Type: application/json\n1 \u003c Date: Fri, 06 Jul 2018 06:42:55 GMT\n1 \u003c Transfer-Encoding: chunked\n1 \u003c X-Application-Context: application:8888\n{\n  \"serviceId\" : \"3859811111111\"\n}\n\n12:12:55.211 DEBUG - response time in milliseconds: 468\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 83806,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "status 202",
+            "match": {
+              "arguments": [
+                {
+                  "val": "202",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1069549,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "match response \u003d\u003d filecompare",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "response",
+                  "offset": 6
+                },
+                {},
+                {
+                  "val": "\u003d\u003d",
+                  "offset": 15
+                },
+                {
+                  "val": "filecompare",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.matchEquals(String,String,String,String,String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 19,
+            "name": "@LoginSchema"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "*def url callonce BaseUrl",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 569499,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "def data \u003d callonce  {serviceId:\u00273859811111111\u0027}",
+            "match": {
+              "arguments": [
+                {
+                  "val": "data",
+                  "offset": 4
+                },
+                {
+                  "val": "callonce  {serviceId:\u00273859811111111\u0027}",
+                  "offset": 11
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "Given ",
+            "doc_string": {
+              "content_type": "",
+              "line": 6,
+              "value": "12:12:55.223 DEBUG - callonce cache hit for: \n"
+            }
+          },
+          {
+            "result": {
+              "duration": 880141,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "def filecompare \u003d read(\u0027JSONSchema.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "filecompare",
+                  "offset": 4
+                },
+                {
+                  "val": "read(\u0027JSONSchema.json\u0027)",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "comments": [
+          {
+            "line": 27,
+            "value": "#And match data.serviceId contains response.serviceId"
+          }
+        ],
+        "line": 30,
+        "name": "Login with Username and Password",
+        "description": "",
+        "id": "onboarding-api;login-with-username-and-password",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 39052,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "url BaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "BaseUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 260166,
+              "status": "passed"
+            },
+            "line": 33,
+            "name": "path \u0027/login\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027/login\u0027",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 9186264,
+              "status": "passed"
+            },
+            "line": 34,
+            "name": "request read(\u0027LoginWithTelekomId.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "read(\u0027LoginWithTelekomId.json\u0027)",
+                  "offset": 8
+                }
+              ],
+              "location": "StepDefs.request(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 396867758,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "method POST",
+            "match": {
+              "arguments": [
+                {
+                  "val": "POST",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 35,
+              "value": "12:12:55.240 DEBUG - \n1 \u003e POST http://18.184.255.205:8888/api/login\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Connection: Keep-Alive\n1 \u003e Content-Length: 207\n1 \u003e Content-Type: application/json; charset\u003dUTF-8\n1 \u003e Host: 18.184.255.205:8888\n1 \u003e User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_172)\n{\"type\":\"telekom\",\"telekomLogin\":{\"username\":\"a\",\"password\":\"a\"},\"device\":{\"id\":\"6b0db8f1-d59e-4eed-b023-ee6820839a45\",\"model\":\"Samsung S8\",\"pushToken\":\"d968ba80-a4da-4527-a9aa-97de4de8ecee\",\"os\":\"android\"}}\n\n12:12:55.632 DEBUG - \n1 \u003c 200\n1 \u003c Content-Type: application/json\n1 \u003c Date: Fri, 06 Jul 2018 06:42:55 GMT\n1 \u003c Transfer-Encoding: chunked\n1 \u003c X-Application-Context: application:8888\n{\n  \"accessToken\" : \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ0b3B0YWwuY29tIiwiZXhwIjoxNDI2NDIwODAwLCJodHRwOi8vdG9wdGFsLmNvbS9qd3RfY2xhaW1zL2lzX2FkbWluIjp0cnVlLCJjb21wYW55IjoiVG9wdGFsIiwiYXdlc29tZSI6dHJ1ZX0.yRQYnWzskCZUxPwaQupWkiUzKELZ49eM7oWxAQK_ZXw\",\n  \"accessExpiresIn\" : 300,\n  \"idToken\" : \"1234zskCZUxPwaQupWkiUzKELZ49eM7oWxAQK_ZXw\",\n  \"refreshToken\" : \"QYnWzskCZUxPwaQupWkiUzKELZ49eM7oWxAQK_ZXw\",\n  \"refreshExpiresIn\" : 1800\n}\n\n12:12:55.633 DEBUG - response time in milliseconds: 396\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 78918,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 29,
+            "name": "@Login"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "*def url callonce BaseUrl",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 355682,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "def data \u003d callonce  {serviceId:\u00273859811111111\u0027}",
+            "match": {
+              "arguments": [
+                {
+                  "val": "data",
+                  "offset": 4
+                },
+                {
+                  "val": "callonce  {serviceId:\u00273859811111111\u0027}",
+                  "offset": 11
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "Given ",
+            "doc_string": {
+              "content_type": "",
+              "line": 6,
+              "value": "12:12:55.643 DEBUG - callonce cache hit for: \n"
+            }
+          },
+          {
+            "result": {
+              "duration": 979275,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "def filecompare \u003d read(\u0027JSONSchema.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "filecompare",
+                  "offset": 4
+                },
+                {
+                  "val": "read(\u0027JSONSchema.json\u0027)",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 39,
+        "name": "Login in App using Invalid Method",
+        "description": "",
+        "id": "onboarding-api;login-in-app-using-invalid-method",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 38346,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "url BaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "BaseUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 212034,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "path \u0027/login\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027/login\u0027",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 115421,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "request {\u0027type\u0027 : \u0027\u0027,\u0027IMSI\u0027 : \u002735646316464313565746\u0027}",
+            "match": {
+              "arguments": [
+                {
+                  "val": "{\u0027type\u0027 : \u0027\u0027,\u0027IMSI\u0027 : \u002735646316464313565746\u0027}",
+                  "offset": 8
+                }
+              ],
+              "location": "StepDefs.request(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 413490264,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "method POST",
+            "match": {
+              "arguments": [
+                {
+                  "val": "POST",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 44,
+              "value": "12:12:55.647 DEBUG - \n1 \u003e POST http://18.184.255.205:8888/api/login\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Connection: Keep-Alive\n1 \u003e Content-Length: 41\n1 \u003e Content-Type: application/json; charset\u003dUTF-8\n1 \u003e Host: 18.184.255.205:8888\n1 \u003e User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_172)\n{\"type\":\"\",\"IMSI\":\"35646316464313565746\"}\n\n12:12:56.058 DEBUG - \n1 \u003c 400\n1 \u003c Connection: close\n1 \u003c Content-Type: application/json\n1 \u003c Date: Fri, 06 Jul 2018 06:42:55 GMT\n1 \u003c Transfer-Encoding: chunked\n1 \u003c X-Application-Context: application:8888\n{\n  \"id\" : \"3ae7a24d-9926-462b-9e89-6dd4b7d4e7ea\",\n  \"code\" : \"BAD_REQUEST\",\n  \"message\" : \"Can not deserialize value of type dt.oneapp.bff.flow.onboarding.model.BffLoginData$TypeEnum from String \\\"\\\": value not one of declared Enum instance names: [headerEnrichment, IMSI, ICCID, social, telekom]\\n at [Source: org.apache.cxf.transport.http.AbstractHTTPDestination$1@41ac1118; line: 1, column: 9] (through reference chain: dt.oneapp.bff.flow.onboarding.model.BffLoginData[\\\"type\\\"])\",\n  \"timestamp\" : \"2018-07-06T06:42:55.879Z\",\n  \"stackTrace\" : \"com.fasterxml.jackson.databind.exc.InvalidFormatException: Can not deserialize value of type dt.oneapp.bff.flow.onboarding.model.BffLoginData$TypeEnum from String \\\"\\\": value not one of declared Enum instance names: [headerEnrichment, IMSI, ICCID, social, telekom]\\n at [Source: org.apache.cxf.transport.http.AbstractHTTPDestination$1@41ac1118; line: 1, column: 9] (through reference chain: dt.oneapp.bff.flow.onboarding.model.BffLoginData[\\\"type\\\"])\\n\\tat com.fasterxml.jackson.databind.exc.InvalidFormatException.from(InvalidFormatException.java:74)\\n\\tat com.fasterxml.jackson.databind.DeserializationContext.weirdStringException(DeserializationContext.java:1423)\\n\\tat com.fasterxml.jackson.databind.DeserializationContext.handleWeirdStringValue(DeserializationContext.java:926)\\n\\tat com.fasterxml.jackson.databind.deser.std.EnumDeserializer._deserializeAltString(EnumDeserializer.java:189)\\n\\tat com.fasterxml.jackson.databind.deser.std.EnumDeserializer.deserialize(EnumDeserializer.java:126)\\n\\tat com.fasterxml.jackson.databind.deser.SettableBeanProperty.deserialize(SettableBeanProperty.java:504)\\n\\tat com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeWithErrorWrapping(BeanDeserializer.java:511)\\n\\tat com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:400)\\n\\tat com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1191)\\n\\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:314)\\n\\tat com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:148)\\n\\tat com.fasterxml.jackson.databind.ObjectReader._bind(ObjectReader.java:1583)\\n\\tat com.fasterxml.jackson.databind.ObjectReader.readValue(ObjectReader.java:964)\\n\\tat com.fasterxml.jackson.jaxrs.base.ProviderBase.readFrom(ProviderBase.java:815)\\n\\tat org.apache.cxf.jaxrs.utils.JAXRSUtils.readFromMessageBodyReader(JAXRSUtils.java:1348)\\n\\tat org.apache.cxf.jaxrs.utils.JAXRSUtils.readFromMessageBody(JAXRSUtils.java:1299)\\n\\tat org.apache.cxf.jaxrs.utils.JAXRSUtils.processParameter(JAXRSUtils.java:825)\\n\\tat org.apache.cxf.jaxrs.utils.JAXRSUtils.processParameters(JAXRSUtils.java:789)\\n\\tat org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.processRequest(JAXRSInInterceptor.java:212)\\n\\tat org.apache.cxf.jaxrs.interceptor.JAXRSInInterceptor.handleMessage(JAXRSInInterceptor.java:77)\\n\\tat org.apache.cxf.phase.PhaseInterceptorChain.doIntercept(PhaseInterceptorChain.java:308)\\n\\tat org.apache.cxf.transport.ChainInitiationObserver.onMessage(ChainInitiationObserver.java:121)\\n\\tat org.apache.cxf.transport.http.AbstractHTTPDestination.invoke(AbstractHTTPDestination.java:262)\\n\\tat org.apache.cxf.transport.servlet.ServletController.invokeDestination(ServletController.java:234)\\n\\tat org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:208)\\n\\tat org.apache.cxf.transport.servlet.ServletController.invoke(ServletController.java:160)\\n\\tat org.apache.cxf.transport.servlet.CXFNonSpringServlet.invoke(CXFNonSpringServlet.java:180)\\n\\tat org.apache.cxf.transport.servlet.AbstractHTTPServlet.handleRequest(AbstractHTTPServlet.java:299)\\n\\tat org.apache.cxf.transport.servlet.AbstractHTTPServlet.doPost(AbstractHTTPServlet.java:218)\\n\\tat javax.servlet.http.HttpServlet.service(HttpServlet.java:661)\\n\\tat org.apache.cxf.transport.servlet.AbstractHTTPServlet.service(AbstractHTTPServlet.java:274)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\\n\\tat org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\\n\\tat org.springframework.boot.web.filter.ApplicationContextHeaderFilter.doFilterInternal(ApplicationContextHeaderFilter.java:55)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\\n\\tat org.springframework.boot.actuate.trace.WebRequestTraceFilter.doFilterInternal(WebRequestTraceFilter.java:111)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\\n\\tat org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:208)\\n\\tat org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:177)\\n\\tat org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:347)\\n\\tat org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:263)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\\n\\tat org.springframework.web.filter.AbstractRequestLoggingFilter.doFilterInternal(AbstractRequestLoggingFilter.java:244)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\\n\\tat org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\\n\\tat org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\\n\\tat org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:81)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\\n\\tat org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\\n\\tat org.springframework.boot.actuate.autoconfigure.MetricsFilter.doFilterInternal(MetricsFilter.java:106)\\n\\tat org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)\\n\\tat org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)\\n\\tat org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)\\n\\tat org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)\\n\\tat org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:496)\\n\\tat org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)\\n\\tat org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)\\n\\tat org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)\\n\\tat org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)\\n\\tat org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:803)\\n\\tat org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)\\n\\tat org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:790)\\n\\tat org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1459)\\n\\tat org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)\\n\\tat java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)\\n\\tat java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)\\n\\tat org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)\\n\\tat java.lang.Thread.run(Thread.java:748)\\n\"\n}\n\n12:12:56.059 DEBUG - response time in milliseconds: 412\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 64764,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "status 400",
+            "match": {
+              "arguments": [
+                {
+                  "val": "400",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 3431056,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "match response.code contains \u0027BAD_REQUEST\u0027",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "response.code",
+                  "offset": 6
+                },
+                {},
+                {},
+                {},
+                {
+                  "val": " \u0027BAD_REQUEST\u0027",
+                  "offset": 28
+                }
+              ],
+              "location": "StepDefs.matchContains(String,String,String,String,String,String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 38,
+            "name": "@Login"
+          }
+        ]
+      },
+      {
+        "line": 4,
+        "name": "",
+        "description": "*def url callonce BaseUrl",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 364601,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "def data \u003d callonce  {serviceId:\u00273859811111111\u0027}",
+            "match": {
+              "arguments": [
+                {
+                  "val": "data",
+                  "offset": 4
+                },
+                {
+                  "val": "callonce  {serviceId:\u00273859811111111\u0027}",
+                  "offset": 11
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "Given ",
+            "doc_string": {
+              "content_type": "",
+              "line": 6,
+              "value": "12:12:56.072 DEBUG - callonce cache hit for: \n"
+            }
+          },
+          {
+            "result": {
+              "duration": 978710,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "def filecompare \u003d read(\u0027JSONSchema.json\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "filecompare",
+                  "offset": 4
+                },
+                {
+                  "val": "read(\u0027JSONSchema.json\u0027)",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "Given "
+          }
+        ]
+      },
+      {
+        "line": 50,
+        "name": "Generate Login PIN and update the same using new Key",
+        "description": "",
+        "id": "onboarding-api;generate-login-pin-and-update-the-same-using-new-key",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 57540,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "url BaseUrl",
+            "match": {
+              "arguments": [
+                {
+                  "val": "BaseUrl",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2467654,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "path \u0027/pin\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027/pin\u0027",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 113443,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "request {\u0027context\u0027 : \u0027login\u0027,\u0027serviceType\u0027: \u0027phoneNumber\u0027,\u0027serviceId\u0027 : \u0027385981111111\u0027}",
+            "match": {
+              "arguments": [
+                {
+                  "val": "{\u0027context\u0027 : \u0027login\u0027,\u0027serviceType\u0027: \u0027phoneNumber\u0027,\u0027serviceId\u0027 : \u0027385981111111\u0027}",
+                  "offset": 8
+                }
+              ],
+              "location": "StepDefs.request(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 387333320,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "method POST",
+            "match": {
+              "arguments": [
+                {
+                  "val": "POST",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 55,
+              "value": "12:12:56.079 DEBUG - \n1 \u003e POST http://18.184.255.205:8888/api/pin\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Connection: Keep-Alive\n1 \u003e Content-Length: 74\n1 \u003e Content-Type: application/json; charset\u003dUTF-8\n1 \u003e Host: 18.184.255.205:8888\n1 \u003e User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_172)\n{\"context\":\"login\",\"serviceType\":\"phoneNumber\",\"serviceId\":\"385981111111\"}\n\n12:12:56.465 DEBUG - \n1 \u003c 200\n1 \u003c Content-Type: application/json\n1 \u003c Date: Fri, 06 Jul 2018 06:42:56 GMT\n1 \u003c Transfer-Encoding: chunked\n1 \u003c X-Application-Context: application:8888\n{\n  \"serviceId\" : \"+385981111111\",\n  \"nonce\" : \"2ac283f3-59b1-4c5b-89a0-cdc4ef9addfb\"\n}\n\n12:12:56.465 DEBUG - response time in milliseconds: 387\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 91907,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 17662841,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "def nonce \u003d response.nonce",
+            "match": {
+              "arguments": [
+                {
+                  "val": "nonce",
+                  "offset": 4
+                },
+                {
+                  "val": "response.nonce",
+                  "offset": 12
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 178574,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "path \u0027/pin\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027/pin\u0027",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 115613,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "def payload \u003d {\u0027context\u0027 : \u0027service\u0027,\u0027serviceType\u0027: \u0027phoneNumber\u0027,\u0027serviceId\u0027: \u00273859811111111111\u0027,\u0027PIN\u0027: \u00271234\u0027}",
+            "match": {
+              "arguments": [
+                {
+                  "val": "payload",
+                  "offset": 4
+                },
+                {
+                  "val": "{\u0027context\u0027 : \u0027service\u0027,\u0027serviceType\u0027: \u0027phoneNumber\u0027,\u0027serviceId\u0027: \u00273859811111111111\u0027,\u0027PIN\u0027: \u00271234\u0027}",
+                  "offset": 14
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 436498,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "set payload $.nonce \u003d nonce",
+            "match": {
+              "arguments": [
+                {
+                  "val": "payload",
+                  "offset": 4
+                },
+                {
+                  "val": " $.nonce",
+                  "offset": 11
+                },
+                {
+                  "val": "nonce",
+                  "offset": 22
+                }
+              ],
+              "location": "StepDefs.setByPath(String,String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 35510,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "request payload",
+            "match": {
+              "arguments": [
+                {
+                  "val": "payload",
+                  "offset": 8
+                }
+              ],
+              "location": "StepDefs.request(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 396591701,
+              "status": "passed"
+            },
+            "line": 62,
+            "name": "method PUT",
+            "match": {
+              "arguments": [
+                {
+                  "val": "PUT",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "When ",
+            "doc_string": {
+              "content_type": "",
+              "line": 62,
+              "value": "12:12:56.488 DEBUG - \n2 \u003e PUT http://18.184.255.205:8888/api/pin\n2 \u003e Accept-Encoding: gzip,deflate\n2 \u003e Connection: Keep-Alive\n2 \u003e Content-Length: 140\n2 \u003e Content-Type: application/json; charset\u003dUTF-8\n2 \u003e Host: 18.184.255.205:8888\n2 \u003e User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_172)\n{\"context\":\"service\",\"serviceType\":\"phoneNumber\",\"serviceId\":\"3859811111111111\",\"PIN\":\"1234\",\"nonce\":\"2ac283f3-59b1-4c5b-89a0-cdc4ef9addfb\"}\n\n12:12:56.883 DEBUG - \n2 \u003c 200\n2 \u003c Content-Type: application/json\n2 \u003c Date: Fri, 06 Jul 2018 06:42:56 GMT\n2 \u003c Transfer-Encoding: chunked\n2 \u003c X-Application-Context: application:8888\n{\n  \"serviceId\" : \"3859811111111111\"\n}\n\n12:12:56.883 DEBUG - response time in milliseconds: 396\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 78022,
+              "status": "passed"
+            },
+            "line": 63,
+            "name": "status 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.status(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1274595,
+              "error_message": "com.intuit.karate.exception.KarateException: path: $.serviceId, actual: \u00273859811111111111\u0027, expected: \u00274567838239123017\u0027, reason: not equal\n\tat com.intuit.karate.StepDefs.matchNamed(StepDefs.java:540)\n\tat com.intuit.karate.StepDefs.matchContains(StepDefs.java:532)\n\tat ✽.And match response contains {serviceId:\u00274567838239123017\u0027}(Onboarding/Onboarding.feature:64)\n",
+              "status": "failed"
+            },
+            "line": 64,
+            "name": "match response contains {serviceId:\u00274567838239123017\u0027}",
+            "match": {
+              "arguments": [
+                {},
+                {
+                  "val": "response",
+                  "offset": 6
+                },
+                {},
+                {},
+                {},
+                {
+                  "val": " {serviceId:\u00274567838239123017\u0027}",
+                  "offset": 23
+                }
+              ],
+              "location": "StepDefs.matchContains(String,String,String,String,String,String)"
+            },
+            "keyword": "And ",
+            "doc_string": {
+              "content_type": "",
+              "line": 64,
+              "value": "12:12:56.885 ERROR - assertion failed: path: $.serviceId, actual: \u00273859811111111111\u0027, expected: \u00274567838239123017\u0027, reason: not equal\n"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "line": 49,
+            "name": "@Login"
+          }
+        ]
+      }
+    ],
+    "name": "Onboarding/Onboarding.feature",
+    "description": "Onboarding API",
+    "id": "onboarding-api",
+    "keyword": "Feature",
+    "uri": "Onboarding/Onboarding.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@Onboarding"
+      }
+    ]
+  }
+]

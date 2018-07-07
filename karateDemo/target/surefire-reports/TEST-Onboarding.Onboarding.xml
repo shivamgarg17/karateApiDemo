@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="1" name="Onboarding API" skipped="0" tests="5" time="3.115641">
+<testcase classname="Onboarding.Onboarding" name="Login using SMS" time="1.009639">
+<system-out><![CDATA[Given def data = callonce  {serviceId:'3859811111111'}......................passed
+Given def filecompare = read('JSONSchema.json').............................passed
+Given url BaseUrl...........................................................passed
+And path '/login'...........................................................passed
+Given request read('LoginWithSMS.json').....................................passed
+When method POST............................................................passed
+Then status 200.............................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Onboarding.Onboarding" name="Login with IMSI" time="0.471652">
+<system-out><![CDATA[Given def data = callonce  {serviceId:'3859811111111'}......................passed
+Given def filecompare = read('JSONSchema.json').............................passed
+Given url BaseUrl...........................................................passed
+And path '/login'...........................................................passed
+Given request {'type' : 'IMSI','IMSI' : '35646316464313565746'}.............passed
+When method POST............................................................passed
+Then status 202.............................................................passed
+And match response == filecompare...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Onboarding.Onboarding" name="Login with Username and Password" time="0.407882">
+<system-out><![CDATA[Given def data = callonce  {serviceId:'3859811111111'}......................passed
+Given def filecompare = read('JSONSchema.json').............................passed
+Given url BaseUrl...........................................................passed
+And path '/login'...........................................................passed
+Given request read('LoginWithTelekomId.json')...............................passed
+When method POST............................................................passed
+Then status 200.............................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Onboarding.Onboarding" name="Login in App using Invalid Method" time="0.418687">
+<system-out><![CDATA[Given def data = callonce  {serviceId:'3859811111111'}......................passed
+Given def filecompare = read('JSONSchema.json').............................passed
+Given url BaseUrl...........................................................passed
+And path '/login'...........................................................passed
+Given request {'type' : '','IMSI' : '35646316464313565746'}.................passed
+When method POST............................................................passed
+Then status 400.............................................................passed
+And match response.code contains 'BAD_REQUEST'..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="Onboarding.Onboarding" name="Generate Login PIN and update the same using new Key" time="0.807781">
+<failure message="com.intuit.karate.exception.KarateException: path: $.serviceId, actual: '3859811111111111', expected: '4567838239123017', reason: not equal&#10;&#9;at com.intuit.karate.StepDefs.matchNamed(StepDefs.java:540)&#10;&#9;at com.intuit.karate.StepDefs.matchContains(StepDefs.java:532)&#10;&#9;at ✽.And match response contains {serviceId:'4567838239123017'}(Onboarding/Onboarding.feature:64)&#10;"><![CDATA[Given def data = callonce  {serviceId:'3859811111111'}......................passed
+Given def filecompare = read('JSONSchema.json').............................passed
+Given url BaseUrl...........................................................passed
+Given path '/pin'...........................................................passed
+And request {'context' : 'login','serviceType': 'phoneNumber','serviceId' : '385981111111'}.passed
+When method POST............................................................passed
+Then status 200.............................................................passed
+And def nonce = response.nonce..............................................passed
+Given path '/pin'...........................................................passed
+And def payload = {'context' : 'service','serviceType': 'phoneNumber','serviceId': '3859811111111111','PIN': '1234'}.passed
+And set payload $.nonce = nonce.............................................passed
+And request payload.........................................................passed
+When method PUT.............................................................passed
+Then status 200.............................................................passed
+And match response contains {serviceId:'4567838239123017'}..................failed
+
+StackTrace:
+com.intuit.karate.exception.KarateException: path: $.serviceId, actual: '3859811111111111', expected: '4567838239123017', reason: not equal
+	at com.intuit.karate.StepDefs.matchNamed(StepDefs.java:540)
+	at com.intuit.karate.StepDefs.matchContains(StepDefs.java:532)
+	at ✽.And match response contains {serviceId:'4567838239123017'}(Onboarding/Onboarding.feature:64)
+]]></failure>
+</testcase>
+</testsuite>

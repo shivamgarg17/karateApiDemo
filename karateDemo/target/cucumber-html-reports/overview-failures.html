@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports  - Failures Overview</title>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation"  class="active" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>OneApp API</td>
+            <td>07 Jul 2018, 13:03</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Failures Overview</h2>
+          <p>The following summary displays scenarios that failed.</p>
+      </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+
+              <div class="elements">
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_Header-Headers-feature.html">Header/Headers.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_Login.html">@Login</a>
+      </div>
+
+  
+  <span class="lead-duration duration">1s 177ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Change Header value</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">print reqheaders</span>
+  
+  <span class="lead-duration duration">005ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>22:51:34.195 INFO  - [print]
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url 'http://dev.mito.hu/oneapp/pin/'</span>
+  
+  <span class="lead-duration duration">002ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request {'context' : 'login','serviceType': 'phoneNumber','serviceId' : '385981111111'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method POST</span>
+  
+  <span class="lead-duration duration">546ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-4">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-4" class="collapse collapsable-details">
+        <pre>22:51:34.204 DEBUG - 
+1 &gt; POST http://dev.mito.hu/oneapp/pin/
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 74
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: dev.mito.hu
+1 &gt; User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_172)
+{&quot;context&quot;:&quot;login&quot;,&quot;serviceType&quot;:&quot;phoneNumber&quot;,&quot;serviceId&quot;:&quot;385981111111&quot;}
+
+22:51:34.748 DEBUG - 
+1 &lt; 200
+1 &lt; Accept-Ranges: bytes
+1 &lt; Age: 0
+1 &lt; Cache-Control: no-cache, no-store, must-revalidate
+1 &lt; Connection: close
+1 &lt; Content-Length: 52
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Thu, 05 Jul 2018 17:21:34 GMT
+1 &lt; Expires: 0
+1 &lt; Pragma: no-cache
+1 &lt; Server: Apache/2.4.10 (Debian)
+1 &lt; Set-Cookie: REMEMBER_ME=I+will+remember+you
+1 &lt; Via: 1.1 varnish (Varnish/5.2)
+1 &lt; X-Backend: default
+1 &lt; X-Cache: MISS
+1 &lt; X-Varnish: 216063909
+{&quot;serviceId&quot;:&quot;385981111111&quot;,&quot;nonce&quot;:&quot;5b3e539e90586&quot;}
+
+22:51:34.749 DEBUG - response time in milliseconds: 545
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">def nonce = response.nonce</span>
+  
+  <span class="lead-duration duration">007ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path '/pin'</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">def payload = {'context' : 'service','serviceType': 'phoneNumber','serviceId': '3859811111111111','PIN': '1234'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set payload $.nonce = nonce</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request payload</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method PUT</span>
+  
+  <span class="lead-duration duration">612ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-5">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-5" class="collapse collapsable-details">
+        <pre>22:51:34.772 DEBUG - 
+2 &gt; PUT http://dev.mito.hu/oneapp/pin/pin
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Content-Length: 117
+2 &gt; Content-Type: application/json; charset=UTF-8
+2 &gt; Cookie: REMEMBER_ME=I+will+remember+you
+2 &gt; Host: dev.mito.hu
+2 &gt; User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_172)
+{&quot;context&quot;:&quot;service&quot;,&quot;serviceType&quot;:&quot;phoneNumber&quot;,&quot;serviceId&quot;:&quot;3859811111111111&quot;,&quot;PIN&quot;:&quot;1234&quot;,&quot;nonce&quot;:&quot;5b3e539e90586&quot;}
+
+22:51:35.359 DEBUG - 
+2 &lt; 405
+2 &lt; Age: 0
+2 &lt; Allow: GET,HEAD,POST,OPTIONS
+2 &lt; Connection: close
+2 &lt; Content-Length: 312
+2 &lt; Content-Type: text/html; charset=iso-8859-1
+2 &lt; Date: Thu, 05 Jul 2018 17:21:35 GMT
+2 &lt; Server: Apache/2.4.10 (Debian)
+2 &lt; Via: 1.1 varnish (Varnish/5.2)
+2 &lt; X-Backend: default
+2 &lt; X-Cache: MISS
+2 &lt; X-Varnish: 219077423
+&lt;!DOCTYPE HTML PUBLIC &quot;-//IETF//DTD HTML 2.0//EN&quot;&gt;
+&lt;html&gt;&lt;head&gt;
+&lt;title&gt;405 Method Not Allowed&lt;/title&gt;
+&lt;/head&gt;&lt;body&gt;
+&lt;h1&gt;Method Not Allowed&lt;/h1&gt;
+&lt;p&gt;The requested method PUT is not allowed for the URL /oneapp/pin/pin.&lt;/p&gt;
+&lt;hr&gt;
+&lt;address&gt;Apache/2.4.10 (Debian) Server at dev.mito.hu Port 80&lt;/address&gt;
+&lt;/body&gt;&lt;/html&gt;
+
+
+22:51:35.360 DEBUG - response time in milliseconds: 589
+22:51:35.375 WARN  - xml parsing failed, response data type set to string: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 50; White spaces are required between publicId and systemId.
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-6">
+          <a>com.intuit.karate.exception.KarateException: status code was: 405, expected: 200, response time: 589, url: http://dev.mito.hu/oneapp/pin/pin, response: &lt;!DOCTYPE HTML PUBLIC &quot;-//IETF//DTD HTML 2.0//EN&quot;&gt;</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: status code was: 405, expected: 200, response time: 589, url: http://dev.mito.hu/oneapp/pin/pin, response: &lt;!DOCTYPE HTML PUBLIC &quot;-//IETF//DTD HTML 2.0//EN&quot;&gt;
+&lt;html&gt;&lt;head&gt;
+&lt;title&gt;405 Method Not Allowed&lt;/title&gt;
+&lt;/head&gt;&lt;body&gt;
+&lt;h1&gt;Method Not Allowed&lt;/h1&gt;
+&lt;p&gt;The requested method PUT is not allowed for the URL /oneapp/pin/pin.&lt;/p&gt;
+&lt;hr&gt;
+&lt;address&gt;Apache/2.4.10 (Debian) Server at dev.mito.hu Port 80&lt;/address&gt;
+&lt;/body&gt;&lt;/html&gt;
+
+	at com.intuit.karate.StepDefs.status(StepDefs.java:480)
+	at &#10045;.Then status 200(Header/Headers.feature:31)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-7">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-7" class="collapse collapsable-details">
+        <pre>22:51:35.376 ERROR - status code was: 405, expected: 200, response time: 589, url: http://dev.mito.hu/oneapp/pin/pin, response: &lt;!DOCTYPE HTML PUBLIC &quot;-//IETF//DTD HTML 2.0//EN&quot;&gt;
+&lt;html&gt;&lt;head&gt;
+&lt;title&gt;405 Method Not Allowed&lt;/title&gt;
+&lt;/head&gt;&lt;body&gt;
+&lt;h1&gt;Method Not Allowed&lt;/h1&gt;
+&lt;p&gt;The requested method PUT is not allowed for the URL /oneapp/pin/pin.&lt;/p&gt;
+&lt;hr&gt;
+&lt;address&gt;Apache/2.4.10 (Debian) Server at dev.mito.hu Port 80&lt;/address&gt;
+&lt;/body&gt;&lt;/html&gt;
+
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match response contains {serviceId:'4567838239123017'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+      <div class="indention">
+      <b>Feature:</b>
+      <a href="report-feature_Onboarding-Onboarding-feature_2.html">Onboarding/Onboarding.feature</a>
+    </div>
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_Login.html">@Login</a>
+      </div>
+
+  
+  <span class="lead-duration duration">806ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-8">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Generate Login PIN and update the same using new Key</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-8" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-9">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-9" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">url BaseUrl</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path '/pin'</span>
+  
+  <span class="lead-duration duration">002ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request {'context' : 'login','serviceType': 'phoneNumber','serviceId' : '385981111111'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method POST</span>
+  
+  <span class="lead-duration duration">387ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-10">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-10" class="collapse collapsable-details">
+        <pre>12:12:56.079 DEBUG - 
+1 &gt; POST http://18.184.255.205:8888/api/pin
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 74
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: 18.184.255.205:8888
+1 &gt; User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_172)
+{&quot;context&quot;:&quot;login&quot;,&quot;serviceType&quot;:&quot;phoneNumber&quot;,&quot;serviceId&quot;:&quot;385981111111&quot;}
+
+12:12:56.465 DEBUG - 
+1 &lt; 200
+1 &lt; Content-Type: application/json
+1 &lt; Date: Fri, 06 Jul 2018 06:42:56 GMT
+1 &lt; Transfer-Encoding: chunked
+1 &lt; X-Application-Context: application:8888
+{
+  &quot;serviceId&quot; : &quot;+385981111111&quot;,
+  &quot;nonce&quot; : &quot;2ac283f3-59b1-4c5b-89a0-cdc4ef9addfb&quot;
+}
+
+12:12:56.465 DEBUG - response time in milliseconds: 387
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">def nonce = response.nonce</span>
+  
+  <span class="lead-duration duration">017ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">path '/pin'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">def payload = {'context' : 'service','serviceType': 'phoneNumber','serviceId': '3859811111111111','PIN': '1234'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">set payload $.nonce = nonce</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">request payload</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">When</span>
+  <span class="name">method PUT</span>
+  
+  <span class="lead-duration duration">396ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-11">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-11" class="collapse collapsable-details">
+        <pre>12:12:56.488 DEBUG - 
+2 &gt; PUT http://18.184.255.205:8888/api/pin
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Connection: Keep-Alive
+2 &gt; Content-Length: 140
+2 &gt; Content-Type: application/json; charset=UTF-8
+2 &gt; Host: 18.184.255.205:8888
+2 &gt; User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_172)
+{&quot;context&quot;:&quot;service&quot;,&quot;serviceType&quot;:&quot;phoneNumber&quot;,&quot;serviceId&quot;:&quot;3859811111111111&quot;,&quot;PIN&quot;:&quot;1234&quot;,&quot;nonce&quot;:&quot;2ac283f3-59b1-4c5b-89a0-cdc4ef9addfb&quot;}
+
+12:12:56.883 DEBUG - 
+2 &lt; 200
+2 &lt; Content-Type: application/json
+2 &lt; Date: Fri, 06 Jul 2018 06:42:56 GMT
+2 &lt; Transfer-Encoding: chunked
+2 &lt; X-Application-Context: application:8888
+{
+  &quot;serviceId&quot; : &quot;3859811111111111&quot;
+}
+
+12:12:56.883 DEBUG - response time in milliseconds: 396
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">And</span>
+  <span class="name">match response contains {serviceId:'4567838239123017'}</span>
+  
+  <span class="lead-duration duration">001ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-12">
+          <a>com.intuit.karate.exception.KarateException: path: $.serviceId, actual: '3859811111111111', expected: '4567838239123017', reason: not equal</a>
+      </div>
+      <div id="msg-12" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: path: $.serviceId, actual: '3859811111111111', expected: '4567838239123017', reason: not equal
+	at com.intuit.karate.StepDefs.matchNamed(StepDefs.java:540)
+	at com.intuit.karate.StepDefs.matchContains(StepDefs.java:532)
+	at &#10045;.And match response contains {serviceId:'4567838239123017'}(Onboarding/Onboarding.feature:64)
+</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-13">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-13" class="collapse collapsable-details">
+        <pre>12:12:56.885 ERROR - assertion failed: path: $.serviceId, actual: '3859811111111111', expected: '4567838239123017', reason: not equal
+</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  </div>
+      
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

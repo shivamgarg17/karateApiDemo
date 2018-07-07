@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="To get the details for different Natcos" skipped="0" tests="1" time="3.0872">
+<testcase classname="cms.CMS" name="To get the Details of Hungary(hu)" time="3.0872">
+<system-out><![CDATA[* def getValue = Java.type('com.mito.controller.TokenController')...........passed
+Then def session = getValue.generateRandomToken()...........................passed
+* configure headers = read('classpath:header.js')...........................passed
+Given url 'https://cms.dtoneapp.telekom.net/cdn/configs/'...................passed
+Then print session..........................................................passed
+* def CMS_API_Key = 'A0DWUQQT5xQ1dUPUaprCmAKbvNEkeD2I'......................passed
+Then path CMS_API_Key, 'oa_config_hu_0.25.0.json'...........................passed
+And params {rand: '<session>'}..............................................passed
+And method GET..............................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

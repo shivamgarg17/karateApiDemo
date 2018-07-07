@@ -1,0 +1,225 @@
+[
+  {
+    "line": 3,
+    "elements": [
+      {
+        "line": 5,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 72084058,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "def getValue \u003d Java.type(\u0027com.mito.controller.TokenController\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "getValue",
+                  "offset": 4
+                },
+                {
+                  "val": "Java.type(\u0027com.mito.controller.TokenController\u0027)",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 4815403,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "def session \u003d getValue.generateRandomToken()",
+            "match": {
+              "arguments": [
+                {
+                  "val": "session",
+                  "offset": 4
+                },
+                {
+                  "val": "getValue.generateRandomToken()",
+                  "offset": 14
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "line": 10,
+        "name": "To get the Details of Hungary(hu)",
+        "description": "",
+        "id": "to-get-the-details-for-different-natcos;to-get-the-details-of-hungary(hu)",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4943336,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "configure headers \u003d read(\u0027classpath:header.js\u0027)",
+            "match": {
+              "arguments": [
+                {
+                  "val": "headers",
+                  "offset": 10
+                },
+                {
+                  "val": "read(\u0027classpath:header.js\u0027)",
+                  "offset": 20
+                }
+              ],
+              "location": "StepDefs.configure(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 1770969,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "url \u0027https://cms.dtoneapp.telekom.net/cdn/configs/\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027https://cms.dtoneapp.telekom.net/cdn/configs/\u0027",
+                  "offset": 4
+                }
+              ],
+              "location": "StepDefs.url(String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3685108,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "print session",
+            "match": {
+              "arguments": [
+                {
+                  "val": "session",
+                  "offset": 6
+                }
+              ],
+              "location": "StepDefs.print(String\u003e)"
+            },
+            "keyword": "Then ",
+            "doc_string": {
+              "content_type": "",
+              "line": 13,
+              "value": "13:03:19.334 INFO  - [print] f343110a-a6fc-43c0-97de-56b25501279f\n"
+            }
+          },
+          {
+            "result": {
+              "duration": 1627432,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "def CMS_API_Key \u003d \u0027A0DWUQQT5xQ1dUPUaprCmAKbvNEkeD2I\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "CMS_API_Key",
+                  "offset": 4
+                },
+                {
+                  "val": "\u0027A0DWUQQT5xQ1dUPUaprCmAKbvNEkeD2I\u0027",
+                  "offset": 18
+                }
+              ],
+              "location": "StepDefs.def(String,String)"
+            },
+            "keyword": "* "
+          },
+          {
+            "result": {
+              "duration": 1698788,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "path CMS_API_Key, \u0027oa_config_hu_0.25.0.json\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "CMS_API_Key, \u0027oa_config_hu_0.25.0.json\u0027",
+                  "offset": 5
+                }
+              ],
+              "location": "StepDefs.path(String\u003e)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 33081565,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "params {rand: \u0027\u003csession\u003e\u0027}",
+            "match": {
+              "arguments": [
+                {
+                  "val": "{rand: \u0027\u003csession\u003e\u0027}",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.params(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2963493763,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "method GET",
+            "match": {
+              "arguments": [
+                {
+                  "val": "GET",
+                  "offset": 7
+                }
+              ],
+              "location": "StepDefs.method(String)"
+            },
+            "keyword": "And ",
+            "doc_string": {
+              "content_type": "",
+              "line": 17,
+              "value": "13:03:19.652 DEBUG - \n1 \u003e GET https://cms.dtoneapp.telekom.net/cdn/configs/A0DWUQQT5xQ1dUPUaprCmAKbvNEkeD2I/oa_config_hu_0.25.0.json?rand\u003d%3Csession%3E\n1 \u003e Accept-Encoding: gzip,deflate\n1 \u003e Authorization: mito_mock_api_key_12as51-gfhkn3-132\n1 \u003e Connection: Keep-Alive\n1 \u003e Host: cms.dtoneapp.telekom.net\n1 \u003e User-Agent: Apache-HttpClient/4.5.4 (Java/1.8.0_172)\n1 \u003e X-Client-Version: 0.33.0 (8) @ 8-91796ed (master)\n1 \u003e X-Request-Session-Id: ec5dce78-95dd-484f-8d41-e18bf7bbb667\n1 \u003e X-Request-Tracking-Id: a939e4e6-7ecb-4840-800e-a92bc117da44\n\n13:03:22.338 DEBUG - \n1 \u003c 200\n1 \u003c Cache-Control: must-revalidate\n1 \u003c Connection: keep-alive\n1 \u003c Content-Description: File Transfer\n1 \u003c Content-Disposition: attachment; filename\u003doa_config_hu_0.25.0.json\n1 \u003c Content-Length: 3894\n1 \u003c Content-Transfer-Encoding: binary\n1 \u003c Content-Type: application/octet-stream\n1 \u003c Date: Sat, 07 Jul 2018 07:33:22 GMT\n1 \u003c Expires: 0\n1 \u003c Pragma: public\n1 \u003c Server: Apache\n1 \u003c Strict-Transport-Security: max-age\u003d63072000; includeSubDomains\n1 \u003c X-Content-Type-Options: nosniff\n1 \u003c X-Frame-Options: DENY\n\n13:03:22.340 DEBUG - response time in milliseconds: 2944\n"
+            }
+          }
+        ],
+        "tags": [
+          {
+            "line": 9,
+            "name": "@tag1"
+          }
+        ]
+      }
+    ],
+    "name": "cms/CMS.feature",
+    "description": "To get the details for different Natcos",
+    "id": "to-get-the-details-for-different-natcos",
+    "keyword": "Feature",
+    "uri": "cms/CMS.feature"
+  }
+]

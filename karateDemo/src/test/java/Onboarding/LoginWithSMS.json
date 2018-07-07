@@ -1,0 +1,10 @@
+{
+    "type" : "headerEnrichment",
+    "serviceId" : "4\/PzOJ+h\/MmrEdvJSpLdwg==",
+    "device" : {
+              "id" : "6b0db8f1-d59e-4eed-b023-ee6820839a45",
+              "model" : "Samsung S8",
+              "pushToken" : "d968ba80-a4da-4527-a9aa-97de4de8ecee",
+              "os" : "android"
+        }
+}
