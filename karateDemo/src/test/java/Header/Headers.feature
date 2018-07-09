@@ -4,7 +4,7 @@ Feature: Header configuration, Get all the headers before any request
     And def setheaders = read('classpath:header.js')
   @Login
   Scenario: Check head performing
-    Given headers setheaders
+    * configure headers = setheaders
     And url 'http://dev.mito.hu/oneapp/login/'
     Given request {'type' : 'IMSI','IMSI' : '35646316464313565746'}
     When method POST
