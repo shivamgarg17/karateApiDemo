@@ -5,25 +5,21 @@ Feature: To get the details for different Natcos
 Background:
  * def getValue = Java.type('com.mito.controller.TokenController')
  Then  def session = getValue.generateRandomToken()
+ Then def expectedSchema = read('CMSSchema.json')
  
   @tag1
   Scenario: To get the Details of Hungary(hu)
   * configure headers = read('classpath:header.js')
   Given url 'https://cms.dtoneapp.telekom.net/cdn/configs/'
-  Then print session
   * def CMS_API_Key = 'A0DWUQQT5xQ1dUPUaprCmAKbvNEkeD2I'
   Then path CMS_API_Key, 'oa_config_hu_0.25.0.json'
   And params {rand: '<session>'}
   And method GET
-  And match response contains read('CMSDataValidation.json')  # validate the response data with expected data.
-  Then assert response.modules.payment.acceptedCardTypes.visa == true
-  Then match response == read('CMSSchema.json')
-  #  validate the response data with expected data
+  # validate the response data with expected data
   And match response contains read('CMSDataValidation.json')  
   Then assert response.modules.payment.acceptedCardTypes.visa == true
   # validate the response schema
-  Then match response contains '#[2]'
-  Then match response == read('CMSSchema.json')
+  Then match response == expectedSchema
   
   Then def ref = karate.prevRequest
   * def refHeaders = ref.headers
