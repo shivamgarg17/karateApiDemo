@@ -1,0 +1,228 @@
+{
+  "global": {
+    "userSessionExpirationTime": 3600,
+    "applicationName": "OneApp",
+    "enableClientSideCache": false,
+    "invalidateCacheOnStartup": true,
+    "defaultLanguage": "en"
+  },
+  "modules": {
+    "payment": {
+      "acceptedCardTypes": {
+        "masterCard": true,
+        "maestro": true,
+        "visa": true
+      },
+      "billingPaymentMethods": {
+        "braintree": {
+          "enabled": true,
+          "discountLabel": "",
+          "enableNotificationEmailCard": false
+        },
+        "barcode": {
+          "enabled": true,
+          "discountLabel": ""
+        },
+        "bankTransfer": {
+          "enabled": true,
+          "discountLabel": ""
+        },
+        "payByLink": {
+          "enabled": false,
+          "discountLabel": ""
+        }
+      },
+      "topupPaymentMethods": {
+        "braintree": {
+          "enabled": true,
+          "discountLabel": ""
+        },
+        "fixed": {
+          "enabled": true,
+          "discountLabel": ""
+        },
+        "postpaid": {
+          "enabled": true,
+          "discountLabel": ""
+        },
+        "voucher": {
+          "enabled": false,
+          "discountLabel": ""
+        },
+        "payByLink": {
+          "enabled": false,
+          "discountLabel": ""
+        }
+      },
+      "termsOfTopupPaymentUrl": "https://mito.hu",
+      "enableTopupAdditionalInformation": true
+    },
+    "auth": {
+      "fb": {
+        "appId": 2043847395859883
+      },
+      "connectService": {
+        "companyMethod": "USERNAMEPASS",
+        "methods": {
+          "mobile": {
+            "enabled": true,
+            "serviceIdKeyboardType": "phonenumber",
+            "pinKeyboardType": "numeric"
+          },
+          "fixedVoice": {
+            "enabled": true,
+            "serviceIdKeyboardType": "phonenumber",
+            "pinKeyboardType": "numeric"
+          },
+          "fixedInternet": {
+            "enabled": true,
+            "serviceIdKeyboardType": "phonenumber",
+            "pinKeyboardType": "numeric"
+          },
+          "television": {
+            "enabled": true,
+            "serviceIdKeyboardType": "phonenumber",
+            "pinKeyboardType": "numeric"
+          },
+          "mobileInternet": {
+            "enabled": true,
+            "serviceIdKeyboardType": "phonenumber",
+            "pinKeyboardType": "numeric"
+          }
+        }
+      },
+      "customerSupportNumber": "1414",
+      "pinKeyboardType": "numeric",
+      "showTermsOfUseCheckbox": false,
+      "showForgottenPassword": true,
+      "enableRegistration": false,
+      "rsaPublicKey": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxOnrC7x6UFJ1Z0HGDRUI4qWfCaid33Xgqal9/aSHc9RxmwgS8F65VDp3BGNmdm+6MO2/PhO6Khg90YQUHaUxtlseqKQP8Kc0w1IhdDHt6B+wabXZpi/zjI+b9JJFvOo6f1GwuTA6+aO9jxEGbGU2XPHSe/6x7FkEAa/83T1QIfdJZlHY3Cz9eWrQEUL4UncGMLonufNj4LfUMCE6BO84Oo53YM1BrUmzJt4xDCNm+8hTkEklK8ZWrYrYQM2rxY1uYgQmf8rvfhWcik2R8reD5vDOSfvcYYwEAB+BRhl0pw9KzUhoaDe0SI5RQ2TeLiomdGHwy+8lfDwbo0wDRWA7vQIDAQAB",
+      "methods": {
+        "login": {
+          "enableEmailOtp": false,
+          "enableFacebook": false,
+          "enableUsernamePassword": true,
+          "enableSmsOtp": true,
+          "enableHeaderEnrichment": true,
+          "enableImsi": true
+        },
+        "register": {
+          "enableEmailOtp": true,
+          "enableSmsOtp": true
+        }
+      },
+      "enableSkipAutomaticLoginButton": true,
+      "enableCustomerSupportRecoveryButton": true,
+      "otpSmsPattern": ".*(\\d{4}).*",
+      "otpInputPattern": ".*(\\d{4}).*"
+    },
+    "menu": {
+      "menuOptions": {
+        "LOGOUT": true,
+        "SERVICES": true,
+        "TOPUP": true,
+        "HELP": false
+      },
+      "navBarCustomButton": "TOPUP"
+    },
+    "service": {
+      "manageProfile": {
+        "fields": {
+          "firstName": {
+            "hidden": false,
+            "mandatory": true,
+            "readonly": false
+          },
+          "lastName": {
+            "hidden": false,
+            "mandatory": true,
+            "readonly": false
+          },
+          "identifier": {
+            "hidden": false,
+            "mandatory": true,
+            "readonly": false
+          },
+          "changePassword": {
+            "hidden": false,
+            "mandatory": true,
+            "readonly": false
+          },
+          "dateOfBirth": {
+            "hidden": false,
+            "mandatory": true,
+            "readonly": false
+          },
+          "gender": {
+            "hidden": false,
+            "mandatory": true,
+            "readonly": false
+          },
+          "mobilPhoneNumber": {
+            "hidden": false,
+            "mandatory": true,
+            "readonly": false
+          },
+          "fixedPhoneNumber": {
+            "hidden": false,
+            "mandatory": true,
+            "readonly": false
+          },
+          "email": {
+            "hidden": false,
+            "mandatory": true,
+            "readonly": false
+          }
+        }
+      },
+      "setupProfile": {
+        "validationMethod": "email"
+      }
+    },
+    "setting": {
+      "legalDocuments": [
+        {
+          "title": "Terms and Conditions",
+          "url": "http://unec.edu.az/application/uploads/2014/12/pdf-sample.pdf"
+        },
+        {
+          "title": "Privacy Statement",
+          "url": "http://www.africau.edu/images/default/sample.pdf"
+        },
+        {
+          "title": "Terms of usage",
+          "url": "https://mito.hu"
+        },
+        {
+          "title": "About the application",
+          "url": "https://mito.hu"
+        }
+      ],
+      "consents": {
+        "notificationOnboardingConsentVisibility": true
+      }
+    },
+    "billing": {
+      "showAllUnpaidBillsUrl": "https://stackoverflow.com/",
+      "showMoreThan10UnpaidBillsB2C": "https://www.rfc-editor.org/",
+      "showMoreThan10UnpaidBillsB2B": "https://mito.hu"
+    },
+    "analytics": {
+      "moengage": {
+        "enableUserAttributeTracking": true
+      },
+      "firebaseAnalytics": {
+        "enableUserAttributeTracking": true
+      }
+    },
+    "cms": {
+      "lastModified": 1531140705000,
+      "availableLanguages": [
+        "en",
+        "hu",
+        "cs",
+        "hr"
+      ]
+    }
+  }
+}
