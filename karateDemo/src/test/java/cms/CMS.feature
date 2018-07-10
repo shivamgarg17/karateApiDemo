@@ -15,4 +15,5 @@ Background:
   Then path CMS_API_Key, 'oa_config_hu_0.25.0.json'
   And params {rand: '<session>'}
   And method GET
-    
+  Then def ref = karate.prevRequest
+  * def refHeaders = ref.headers
