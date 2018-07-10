@@ -15,5 +15,15 @@ Background:
   Then path CMS_API_Key, 'oa_config_hu_0.25.0.json'
   And params {rand: '<session>'}
   And method GET
+  And match response contains read('CMSDataValidation.json')  # validate the response data with expected data.
+  Then assert response.modules.payment.acceptedCardTypes.visa == true
+  Then match response == read('CMSSchema.json')
+  #  validate the response data with expected data
+  And match response contains read('CMSDataValidation.json')  
+  Then assert response.modules.payment.acceptedCardTypes.visa == true
+  # validate the response schema
+  Then match response contains '#[2]'
+  Then match response == read('CMSSchema.json')
+  
   Then def ref = karate.prevRequest
   * def refHeaders = ref.headers
