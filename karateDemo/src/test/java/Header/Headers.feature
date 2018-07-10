@@ -1,18 +1,15 @@
 Feature: Header configuration, Get all the headers before any request
 
   Background: 
-    And def setheaders = read('classpath:header.js')
+    * def tokens = callonce read('../cms/CMS.feature')
+    
   @Login
   Scenario: Check head performing
-    * configure headers = setheaders
+    * configure headers = tokens.refHeaders
     And url 'http://dev.mito.hu/oneapp/login/'
     Given request {'type' : 'IMSI','IMSI' : '35646316464313565746'}
     When method POST
     Then print response
-    Then def temp = karate.prevRequest
-    * print temp
-    * def reqheaders = temp.headers
-    * print reqheaders
 
   @Login
   Scenario: Change Header value
